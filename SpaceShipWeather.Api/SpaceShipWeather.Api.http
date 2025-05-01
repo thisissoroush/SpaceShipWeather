@@ -1,0 +1,6 @@
+@SpaceShipWeather.Api_HostAddress = http://localhost:5063
+
+GET {{SpaceShipWeather.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
