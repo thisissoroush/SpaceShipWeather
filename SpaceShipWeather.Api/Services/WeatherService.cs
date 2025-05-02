@@ -6,9 +6,9 @@ using SpaceShipWeather.Api.Services.OutScope;
 
 namespace SpaceShipWeather.Api.Services;
 
-public class WeatherService : IWeatherService
+public sealed class WeatherService : IWeatherService
 {
-    private readonly WeatherClient _weatherClient;
+    private readonly IWeatherClient _weatherClient;
     private readonly SpaceShipDbContext _dbContext;
     private readonly IMemoryCache _cache;
     private readonly ILogger<WeatherService> _logger;
@@ -20,7 +20,7 @@ public class WeatherService : IWeatherService
 
     public WeatherService(
         SpaceShipDbContext dbContext,
-        WeatherClient weatherClient,
+        IWeatherClient weatherClient,
         IMemoryCache cache,
         ILogger<WeatherService> logger
     )

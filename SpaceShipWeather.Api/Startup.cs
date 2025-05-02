@@ -17,7 +17,7 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
-        services.AddHttpClient<WeatherClient>(client =>
+        services.AddHttpClient<IWeatherClient, WeatherClient>(client =>
         {
             client.BaseAddress = new Uri("https://api.open-meteo.com/");
             client.DefaultRequestHeaders.Add("User-Agent", "SpaceShipWeatherApiClient");

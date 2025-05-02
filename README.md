@@ -22,6 +22,14 @@ To Dockerize the project using multi stage build.
 
 ```bash
   docker build .
+
+
+  docker run -d \
+  -p 8080:80 \
+  --name spaceship-weather-api \
+  -v $(pwd)/DatabaseFiles:/app/DataBase/Data \
+  spaceship-weather-image
+
 ```
 
 

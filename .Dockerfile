@@ -1,4 +1,3 @@
-
 # Stage 1: Build
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
@@ -17,17 +16,17 @@ RUN dotnet publish -c Release -o /app/publish
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
 
+# Create folder for SQLite DB
+RUN mkdir -p /app/DataBase/Data
+
 # Copy published output
 COPY --from=build /app/publish .
 
+# Set environment variable for SQLite location (optional, if used by IConfiguration)
+ENV ConnectionStrings__Default="Data Source=/app/DataBase/Data/Weather.db"
+
 # Expose port (adjust if needed)
 EXPOSE 80
-
-# Optional: Create folder for SQLite DB
-RUN mkdir -p /app/DatabaseFiles
-
-# Set environment variable for SQLite location if needed
-# ENV ConnectionStrings__Default="Data Source=/app/DatabaseFiles/spaceship.db"
 
 # Run the app
 ENTRYPOINT ["dotnet", "SpaceShipWeather.Api.dll"]

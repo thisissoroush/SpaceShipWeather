@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceShipWeather.Api", "SpaceShipWeather.Api\SpaceShipWeather.Api.csproj", "{09E2E994-4EE1-4DD8-9321-9043835047E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceShipWeather.Tests", "SpaceShipWeather.Tests\SpaceShipWeather.Tests.csproj", "{C0DBB4E5-7D49-4C86-AEDA-1F6D6034C568}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{09E2E994-4EE1-4DD8-9321-9043835047E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09E2E994-4EE1-4DD8-9321-9043835047E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09E2E994-4EE1-4DD8-9321-9043835047E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0DBB4E5-7D49-4C86-AEDA-1F6D6034C568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0DBB4E5-7D49-4C86-AEDA-1F6D6034C568}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0DBB4E5-7D49-4C86-AEDA-1F6D6034C568}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0DBB4E5-7D49-4C86-AEDA-1F6D6034C568}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

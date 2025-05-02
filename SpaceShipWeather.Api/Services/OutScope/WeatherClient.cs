@@ -1,8 +1,6 @@
-using System.Text.Json;
-
 namespace SpaceShipWeather.Api.Services.OutScope;
 
-public class WeatherClient
+public sealed class WeatherClient : IWeatherClient
 {
     private readonly HttpClient _httpClient;
 
